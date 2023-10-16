@@ -1,0 +1,38 @@
+rnf -> creacion componente react native
+--------------------------------------------------------------
+Uso de expo
+npx create-expo-app AwesomeProject
+cd AwesomeProject
+npx expo start, para directo android -> npm run android
+
+Otra manera de creacion es -> expo init mi-proyecto
+
+Cuenta en expo luciano.lasala12@hotmail.com clave -> Losada#123
+para asociar la app a nuestra cuenta en Expo debemos poner en la terminal -> expo login
+
+--------------------------------------------------------------
+
+React js utiliza el virtual DOM, cuando un componente sufre un cambio solo se recarga ese componente y sus hijos.
+https://expo.dev/accounts/lucianolasala
+
+--------------------------------------------------------------
+Instalamos Reactive Native Elements, y React navigation
+iconos -> https://pictogrammers.com/library/mdi/
+
+--------------------------------------------------------------
+Un stack es util para hacer navegaciones
+
+Primero se crea un Tab.navigator luego por cada screen llamamos al componente stack y dentro de stack estaran cada
+una de nuestros components
+
+--------------------------------------------------------------
+Firebase
+Firestore database es donde se guardan los datos
+Storage guardan imagenes
+
+Para cambiar el color de un boton en android se pone color="#ffff", en <Button></Button>.
+
+instalacion -> npm i react-native-keyboard-aware-scroll-view, permite que aparezca scroll cuando se abre el teclado del celular
+npm i yup -> permite realizar validacion de forms
+npm i formik -> permite manejo de forms
+npm i react-native-toast-message -> toast
