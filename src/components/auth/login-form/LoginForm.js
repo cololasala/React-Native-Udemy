@@ -48,11 +48,11 @@ export function LoginForm() {
       />
       <Input
         placeholder="Contraseña"
-        secureTextEntry={showPassword}
+        secureTextEntry={!showPassword}
         rightIcon={
           <Icon
             type="material-community"
-            name={showPassword ? "eye-off-outline" : "eye-outline"}
+            name={showPassword ? "eye-outline" : "eye-off-outline"}
             iconStyle={styles.icon}
             onPress={showHidePassword}
           />

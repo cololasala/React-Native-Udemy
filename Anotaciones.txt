@@ -23,7 +23,8 @@ iconos -> https://pictogrammers.com/library/mdi/
 Un stack es util para hacer navegaciones
 
 Primero se crea un Tab.navigator luego por cada screen llamamos al componente stack y dentro de stack estaran cada
-una de nuestros components
+una de nuestros screen (la screen se podria pensar como la pantalla "contenedora"). Luego cada screen tendra sus propios
+componentes.
 
 --------------------------------------------------------------
 Firebase
@@ -35,4 +36,10 @@ Para cambiar el color de un boton en android se pone color="#ffff", en <Button><
 instalacion -> npm i react-native-keyboard-aware-scroll-view, permite que aparezca scroll cuando se abre el teclado del celular
 npm i yup -> permite realizar validacion de forms
 npm i formik -> permite manejo de forms
-npm i react-native-toast-message -> toast
+npm i react-native-toast-message -> toast para mensajes
+npm i expo-image-picker -> permite seleccionar imagenes
+
+
+--------------------------------------------------------------
+Cuando se edita el email, Firebase envia un email a esa direccion para verificar el email. Se debe si o si verificarla para 
+luego pueda ingresarse con el nuevo email.

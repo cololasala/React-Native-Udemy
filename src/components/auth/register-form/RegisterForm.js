@@ -54,11 +54,11 @@ export function RegisterForm() {
       <Input
         placeholder="Contraseña"
         containerStyle={styles.input}
-        secureTextEntry={showPassword}
+        secureTextEntry={!showPassword}
         rightIcon={
           <Icon
             type="material-community"
-            name={showPassword ? "eye-off-outline" : "eye-outline"}
+            name={showPassword ? "eye-outline" : "eye-off-outline"}
             iconStyle={styles.icon}
             onPress={showHidePassword}
           />
@@ -69,11 +69,11 @@ export function RegisterForm() {
       <Input
         placeholder="Repetir contraseña"
         containerStyle={styles.input}
-        secureTextEntry={showPassword}
+        secureTextEntry={!showPassword}
         rightIcon={
           <Icon
             type="material-community"
-            name={showPassword ? "eye-off-outline" : "eye-outline"}
+            name={showPassword ? "eye-outline" : "eye-off-outline"}
             iconStyle={styles.icon}
             onPress={showHidePassword}
           />
