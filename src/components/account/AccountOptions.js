@@ -1,13 +1,13 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { ListItem, Icon } from "react-native-elements";
-import { Modal } from "../shared/modal";
+import { Modal } from "../Shared/Modal";
 import { useState } from "react";
-import { ChangeDisplayName } from './change-display-name';
-import { ChangeEmailForm } from "./change-email-form";
-import {ChangePasswordForm} from "./change-password-form";
+import { ChangeDisplayName } from "./ChangeDisplayName";
+import { ChangeEmailForm } from "./ChangeEmailForm";
+import { ChangePasswordForm } from "./ChangePasswordForm";
 
-export function AccountOptions({onReload}) {
+export function AccountOptions({ onReload }) {
   const [showModal, setShowModal] = useState(false);
   const [renderModal, setRenderModal] = useState(null);
 
@@ -15,13 +15,15 @@ export function AccountOptions({onReload}) {
 
   const selectedComponent = (key) => {
     if (key === "displayName") {
-      setRenderModal(<ChangeDisplayName onClose={onCloseModal} onReload={onReload} />);
+      setRenderModal(
+        <ChangeDisplayName onClose={onCloseModal} onReload={onReload} />
+      );
     }
     if (key === "email") {
-      setRenderModal(<ChangeEmailForm onClose={onCloseModal}/>);
+      setRenderModal(<ChangeEmailForm onClose={onCloseModal} />);
     }
     if (key === "password") {
-      setRenderModal(<ChangePasswordForm onClose={onCloseModal}/>);
+      setRenderModal(<ChangePasswordForm onClose={onCloseModal} />);
     }
     setShowModal(true);
   };

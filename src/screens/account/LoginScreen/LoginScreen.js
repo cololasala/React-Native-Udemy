@@ -4,7 +4,7 @@ import React from "react";
 import { styles } from "./LoginScreen.styles";
 import { useNavigation } from "@react-navigation/native";
 import { screen } from "../../../utils/screenName";
-import { LoginForm } from "../../../components/auth/login-form";
+import { LoginForm } from "../../../components/Auth/LoginForm";
 
 export function LoginScreen() {
   const navigation = useNavigation();

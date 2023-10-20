@@ -1,1 +1,1 @@
-export * from './loading-modal';
+export * from './LoadingModal';

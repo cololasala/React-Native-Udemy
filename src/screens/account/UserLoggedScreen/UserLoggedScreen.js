@@ -1,12 +1,12 @@
 import { View } from "react-native";
 import React, { useState } from "react";
-import { InfoUser } from "../../../components/account/info-user/InfoUser";
+import { InfoUser } from "../../../components/Account/InfoUser/InfoUser";
 import { styles } from "./UserLoggedScreen.styles";
 import { Button } from "react-native-elements";
 import { getAuth, signOut } from "firebase/auth";
 import Toast from "react-native-toast-message";
-import { LoadingModal } from "../../../components/shared/loading-modal/LoadingModal";
-import { AccountOptions } from "../../../components/account";
+import { LoadingModal } from "../../../components/Shared/LoadingModal/LoadingModal";
+import { AccountOptions } from "../../../components/Account";
 
 export function UserLoggedScreen() {
   const [loading, setLoading] = useState(false);

@@ -43,3 +43,5 @@ npm i expo-image-picker -> permite seleccionar imagenes
 --------------------------------------------------------------
 Cuando se edita el email, Firebase envia un email a esa direccion para verificar el email. Se debe si o si verificarla para 
 luego pueda ingresarse con el nuevo email.
+
+En la seccion de Restaurantes, el boton de agregar restaurante solo aparecera si estamos logeados.
