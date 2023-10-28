@@ -1,11 +1,14 @@
 import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   content: {
-    marginTop: 10,
-    marginHorizontal: 10,
+    flex: 1,
   },
-  addRestaurant: {
+  btnContainer: {
+    position: "absolute",
+    bottom: 10,
+    right: 10,
+  },
+  btn: {
     backgroundColor: "#00a680",
-    margin: 20,
   },
 });

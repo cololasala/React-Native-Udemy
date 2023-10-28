@@ -45,3 +45,11 @@ Cuando se edita el email, Firebase envia un email a esa direccion para verificar
 luego pueda ingresarse con el nuevo email.
 
 En la seccion de Restaurantes, el boton de agregar restaurante solo aparecera si estamos logeados.
+
+npm i expo-location -> lo usamos para conocer la ubicacion del dispositivo
+npm i react-native-uuid -> paquete para uso unicos de ids
+
+ScrollView puede ser vertical u horizontal
+
+npm i react-native-snap-carousel -> carousel para imagenes
+npm i react-native-open-maps -> abrir mapas

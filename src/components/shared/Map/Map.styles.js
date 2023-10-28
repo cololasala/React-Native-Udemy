@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  content: {
-    backgroundColor: "#fff"
-  }
+    content: {
+        height: 130,
+        width: "100%"
+    }
 });
