@@ -6,7 +6,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { collection, query, orderBy, getDocs } from "firebase/firestore";
 import { screen, db } from "../../../utils";
 import { LoadingModal } from "../../../components/Shared";
-import { ListRestaurants } from "../ListRestaurants/ListRestaurants";
+import { ListRestaurants } from "../ListRestaurantsScreen/ListRestaurants";
 
 export function RestaurantsScreen(props) {
   const { navigation, route } = props;
@@ -22,7 +22,6 @@ export function RestaurantsScreen(props) {
   }, []);
 
   useEffect(() => {
-    console.log("entro en rest")
     const getRestaurantsQuery = query(
       collection(db, "restaurants"),
       orderBy("createAt")

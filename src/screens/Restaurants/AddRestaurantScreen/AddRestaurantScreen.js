@@ -24,7 +24,7 @@ export function AddRestaurantScreen() {
       newData.createAt = new Date();
 
       const database = doc(db, "restaurants", newData.id); //base de firesabe
-      await setDoc(database, newData);  // agregamos un nuevo restaurante
+      await setDoc(database, newData); // agregamos un nuevo restaurante
       navigation.goBack();
     },
   });
@@ -43,9 +43,7 @@ export function AddRestaurantScreen() {
         loading={formik.isSubmitting}
       />
 
-      <Button onPress={() => navigation.goBack()}>
-        
-      </Button>
+      <Button onPress={() => navigation.goBack()}></Button>
     </ScrollView>
   );
 }

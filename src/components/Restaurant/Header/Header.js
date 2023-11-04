@@ -8,7 +8,7 @@ export function Header({ restaurant }) {
     <View style={styles.content}>
       <View style={styles.titleView}>
         <Text style={styles.name}>{restaurant.name}</Text>
-        <Rating imageSize={20} readOnly startingValue={4} />
+        <Rating imageSize={20} readOnly startingValue={restaurant.ratingMedia || 0} />
       </View>
       <Text style={styles.description}>{restaurant.description}</Text>
     </View>

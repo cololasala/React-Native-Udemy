@@ -3,6 +3,7 @@ import React from "react";
 import { styles } from "./Info.styles";
 import { Icon, ListItem } from "react-native-elements";
 import { Map } from "../../Shared/Map";
+import { BtnRevieverForm } from "../BtnRevieverForm";
 
 export function Info({ restaurant }) {
   const listInfo = [
@@ -22,7 +23,7 @@ export function Info({ restaurant }) {
       iconName: "at",
     },
   ];
-  
+
   return (
     <View style={styles.content}>
       <Text style={styles.title}>Información sobre el restaurante</Text>
@@ -36,6 +37,8 @@ export function Info({ restaurant }) {
           </ListItem.Content>
         </ListItem>
       ))}
+
+      <BtnRevieverForm restaurant={restaurant}/>
     </View>
   );
 }

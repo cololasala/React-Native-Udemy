@@ -53,3 +53,4 @@ ScrollView puede ser vertical u horizontal
 
 npm i react-native-snap-carousel -> carousel para imagenes
 npm i react-native-open-maps -> abrir mapas
+npm i lodash -> operaciones aritmeticas, uso la mean (media o promedio)
