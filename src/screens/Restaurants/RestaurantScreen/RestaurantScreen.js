@@ -8,6 +8,7 @@ import { Loading } from "../../../components/Shared/Loading/Loading";
 import { Header } from "../../../components/Restaurant/Header";
 import { Info } from "../../../components/Restaurant/Info";
 import { Reviews } from "../../../components/Restaurant/Reviews/Reviews";
+import {BtnFavorite} from "../../../components/Restaurant/BtnFavorite";
 
 const widthScren = Dimensions.get("window").width;
 
@@ -46,6 +47,7 @@ export function RestaurantScreen({ route }) {
       <Header restaurant={restaurant}/>
       <Info restaurant={restaurant}/>
       <Reviews restaurant={restaurant}/>
+      <BtnFavorite restaurant={restaurant}/>
     </ScrollView>
   );
 }

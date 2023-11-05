@@ -6,7 +6,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { collection, query, orderBy, getDocs } from "firebase/firestore";
 import { screen, db } from "../../../utils";
 import { LoadingModal } from "../../../components/Shared";
-import { ListRestaurants } from "../ListRestaurantsScreen/ListRestaurants";
+import { ListRestaurants } from "../../../components/Restaurants/ListRestaurants/ListRestaurants";
 
 export function RestaurantsScreen(props) {
   const { navigation, route } = props;
