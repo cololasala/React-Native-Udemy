@@ -6,6 +6,12 @@ export const styles = StyleSheet.create({
   },
   addRestaurant: {
     backgroundColor: "#00a680",
-    margin: 20,
+    marginHorizontal: 20,
   },
+  btnGoBack: {
+    backgroundColor: "#5D6D7E",
+    marginTop: 15,
+    marginHorizontal: 20,
+    marginBottom: 10
+  }
 });

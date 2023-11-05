@@ -7,7 +7,6 @@ import {
   query,
   limit,
   orderBy,
-  getDoc,
   endAt,
   getDocs,
 } from "firebase/firestore";
@@ -27,7 +26,7 @@ export function SearchScreen() {
       const q = query(
         collection(db, "restaurants"),
         orderBy("name"),
-        startAt(searchText),
+        startAt(searchText), //se necesitan startAt y endAt para buscar
         endAt(`${searchText}\uf8ff`),
         limit(20)
       );
@@ -42,12 +41,12 @@ export function SearchScreen() {
     navigation.navigate(screen.restaurant.tab, {
       screen: screen.restaurant.restaurant,
       params: {
-        id: idRestaurant
-      }
-    })
-  }
+        id: idRestaurant,
+      },
+    });
+  };
 
-  if(loading) return <Loading show text="Cargando restaurants"/>
+  if (loading) return <Loading show text="Cargando restaurants" />;
 
   return (
     <>
@@ -64,21 +63,23 @@ export function SearchScreen() {
           </View>
         ) : (
           <View>
-            {
-              searchResults.map((item) => {
-                const data = item.data();
+            {searchResults.map((item) => {
+              const data = item.data();
 
-                return (
-                  <ListItem key={data.id} bottomDivider onPress={() => goToRestaurant(data.id)}>
-                      <Avatar source={{ uri: data.images[0] }} rounded/>
-                      <ListItem.Content>
-                        <Text>{data.name}</Text>
-                      </ListItem.Content>
-                      <Icon type="material-community" name="chevron-right"/>
-                  </ListItem>
-                )
-              })
-            }
+              return (
+                <ListItem
+                  key={data.id}
+                  bottomDivider
+                  onPress={() => goToRestaurant(data.id)}
+                >
+                  <Avatar source={{ uri: data.images[0] }} rounded />
+                  <ListItem.Content>
+                    <Text>{data.name}</Text>
+                  </ListItem.Content>
+                  <Icon type="material-community" name="chevron-right" />
+                </ListItem>
+              );
+            })}
           </View>
         )}
       </ScrollView>

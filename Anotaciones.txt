@@ -57,3 +57,8 @@ npm i lodash -> operaciones aritmeticas, uso la mean (media o promedio)
 
 --------------------------------------------------------------
 En la pantalla favoritos solo se mostraran para usuarios logeados
+
+--------------------------------------------------------------
+En app.json -> 
+icon para cambiar icono de la app
+splash para cambiar fondo cuando ingreso a la app

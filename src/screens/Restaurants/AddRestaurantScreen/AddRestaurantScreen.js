@@ -43,7 +43,11 @@ export function AddRestaurantScreen() {
         loading={formik.isSubmitting}
       />
 
-      <Button onPress={() => navigation.goBack()}></Button>
+      <Button
+        title="Regresar"
+        onPress={() => navigation.goBack()}
+        buttonStyle={styles.btnGoBack}
+      ></Button>
     </ScrollView>
   );
 }

@@ -1,7 +1,7 @@
 import { ScrollView, Dimensions } from "react-native";
 import React, { useEffect, useState } from "react";
 import { collection, query, getDocs, where } from "firebase/firestore";
-import { screen, db } from "../../../utils";
+import { db } from "../../../utils";
 import { styles } from "./RestaurantScreen.styles";
 import { Carousel } from "../../../components/Shared/Corousel/Carousel";
 import { Loading } from "../../../components/Shared/Loading/Loading";
