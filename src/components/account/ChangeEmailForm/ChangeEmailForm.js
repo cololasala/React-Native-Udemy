@@ -38,7 +38,6 @@ export function ChangeEmailForm({ onClose }) {
           text1: "Verifique su nuevo email y vuelva a ingresar",
         });
       } catch (error) {
-        console.log(error)
         Toast.show({
           type: "error",
           position: "bottom",

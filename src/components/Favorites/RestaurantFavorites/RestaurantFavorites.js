@@ -22,7 +22,6 @@ export function RestaurantFavorites({ restaurant }) {
 
   const removeFavorite = async () => {
     try {
-      console.log(restaurant)
       await deleteDoc(doc(db, "favorites", restaurant.idFavorite));
     } catch (error) {
       Toast.show({

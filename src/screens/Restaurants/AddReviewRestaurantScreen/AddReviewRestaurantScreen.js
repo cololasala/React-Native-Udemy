@@ -38,7 +38,6 @@ export function AddReviewRestaurantScreen({ route }) {
         await setDoc(database, newData); // agregamos una nueva opinion
         await updateRestaurant(); // actualiza el rating promedio del restaurante
       } catch (error) {
-        console.log(error);
         Toast.show({
           type: "error",
           position: "bottom",

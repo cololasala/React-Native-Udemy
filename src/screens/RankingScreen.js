@@ -15,7 +15,6 @@ export function RankingScreen() {
   const [restaurants, setRestaurants] = useState(null);
   const [loading, setLoading] = useState(true);
   
-  console.log(loading)
   useEffect(() => {
     const q = query(
       collection(db, "restaurants"),
@@ -24,7 +23,6 @@ export function RankingScreen() {
     );
 
     onSnapshot(q, (snaphot) => {
-      console.log(snaphot.docs)
       setRestaurants(snaphot.docs);
       setLoading(false)
     });

@@ -31,7 +31,6 @@ export function ChangePasswordForm({ onClose }) {
           text1: "Contraseña editada exitosamente",
         });
       } catch (error) {
-        console.log(error)
         Toast.show({
           type: "error",
           position: "bottom",
