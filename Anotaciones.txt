@@ -62,3 +62,15 @@ En la pantalla favoritos solo se mostraran para usuarios logeados
 En app.json -> 
 icon para cambiar icono de la app
 splash para cambiar fondo cuando ingreso a la app
+
+--------------------------------------------------------------
+Deploy 
+
+Para hacer deploy usando expo se ejecuta -> expo publish, se debe tener esto -> "useClassicUpdates": true en el archivo
+app.json
+
+--------------------------------------------------------------
+Errores y mejoras
+
+Cuando se crea un restaurante deberia volver a pedir la solicitud
+Si no esta logueado no deberia aparecer el boton de corazon para añadir a favoritos
