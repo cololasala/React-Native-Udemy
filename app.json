@@ -21,7 +21,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "io.expo.client"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -29,6 +33,13 @@
     "updates": {
       "useClassicUpdates": true
     },
-    "plugins": ["expo-image-picker"]
+    "plugins": [
+      "expo-image-picker"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b7cfd1f0-436f-4206-a2bf-16e93f78ecf7"
+      }
+    }
   }
 }

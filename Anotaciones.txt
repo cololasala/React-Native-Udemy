@@ -70,4 +70,11 @@ Para hacer deploy usando expo se ejecuta -> expo publish, se debe tener esto -> 
 app.json
 
 --------------------------------------------------------------
-Errores y mejoras
+Se instalo para poder realizar apk y aab -> npm install eas-cli
+Luego se ejecuta para generar el archivo .aab -> eas build -p android 
+Para obtener un apk -> eas build -p android --profile preview
+
+Android app ID -> io.expo.client
+
+El archivo .apk nos sirve para probar la app en nuestro dispositivo.
+El archivo .aab es para poder subirlo a google play ("aab" es Android App Bundle)
