@@ -71,6 +71,3 @@ app.json
 
 --------------------------------------------------------------
 Errores y mejoras
-
-Cuando se crea un restaurante deberia volver a pedir la solicitud
-Si no esta logueado no deberia aparecer el boton de corazon para añadir a favoritos

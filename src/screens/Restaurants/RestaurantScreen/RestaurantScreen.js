@@ -8,13 +8,22 @@ import { Loading } from "../../../components/Shared/Loading/Loading";
 import { Header } from "../../../components/Restaurant/Header";
 import { Info } from "../../../components/Restaurant/Info";
 import { Reviews } from "../../../components/Restaurant/Reviews/Reviews";
-import {BtnFavorite} from "../../../components/Restaurant/BtnFavorite";
+import { BtnFavorite } from "../../../components/Restaurant/BtnFavorite";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const widthScren = Dimensions.get("window").width;
 
 export function RestaurantScreen({ route }) {
   //este route es propio de props
   const [restaurant, setRestaurant] = useState(null);
+  const [isLogged, setIsLogged] = useState(null);
+
+  const auth = getAuth();
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setIsLogged(Boolean(user));
+    });
+  }, []);
 
   useEffect(() => {
     const restaurantQuery = query(
@@ -33,7 +42,7 @@ export function RestaurantScreen({ route }) {
       });
   }, [route]);
 
-  if(!restaurant) return <Loading show={true} text="Cargando restaurante" />
+  if (!restaurant) return <Loading show={true} text="Cargando restaurante" />;
 
   return (
     <ScrollView style={styles.content}>
@@ -44,10 +53,11 @@ export function RestaurantScreen({ route }) {
         hideDots={false}
       />
 
-      <Header restaurant={restaurant}/>
-      <Info restaurant={restaurant}/>
-      <Reviews restaurant={restaurant}/>
-      <BtnFavorite restaurant={restaurant}/>
+      <Header restaurant={restaurant} />
+      <Info restaurant={restaurant} />
+      <Reviews restaurant={restaurant} />
+
+      {isLogged && <BtnFavorite restaurant={restaurant} />}
     </ScrollView>
   );
 }

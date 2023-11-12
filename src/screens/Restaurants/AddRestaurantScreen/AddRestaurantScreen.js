@@ -11,7 +11,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 import { useNavigation } from "@react-navigation/native";
 
-export function AddRestaurantScreen() {
+export function AddRestaurantScreen({route}) {
   const navigation = useNavigation();
 
   const formik = useFormik({
@@ -25,9 +25,11 @@ export function AddRestaurantScreen() {
 
       const database = doc(db, "restaurants", newData.id); //base de firesabe
       await setDoc(database, newData); // agregamos un nuevo restaurante
+      route.params.getRestaurants(); //llamada para obtener otra vez los restaurantes antes de volver atras
       navigation.goBack();
     },
   });
+  
   return (
     <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <ImageRestaurant formik={formik} />

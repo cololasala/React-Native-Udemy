@@ -32,6 +32,7 @@ export function InfoForm({ formik }) {
         placeholder="Telefóno"
         onChangeText={(text) => formik.setFieldValue("phone", text)}
         errorMessage={formik.errors.phone}
+        keyboardType="numeric"
       />
       <Input
         placeholder="Email"

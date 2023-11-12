@@ -22,6 +22,10 @@ export function RestaurantsScreen(props) {
   }, []);
 
   useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  getRestaurants = () => {
     const getRestaurantsQuery = query(
       collection(db, "restaurants"),
       orderBy("createAt")
@@ -38,16 +42,15 @@ export function RestaurantsScreen(props) {
       .catch((error) => {
         console.error("Error obteniendo restaurantes: ", error);
       });
-  }, []);
+  };
 
   const goToAddRestaurant = () => {
-    navigation.navigate(screen.restaurant.addRestaurant); //navegamos a otro screen dentro de nuestro stack
+    navigation.navigate(screen.restaurant.addRestaurant, { getRestaurants }); //navegamos a otro screen dentro de nuestro stack
     // navigation.navigate(screen.account.tab, { screen: screen.account.account});
   };
 
   return (
     <View style={styles.content}>
-      
       {!restaurants ? (
         <LoadingModal show={true} text="Cargando" />
       ) : (
